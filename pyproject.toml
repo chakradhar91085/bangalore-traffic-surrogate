@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rasta-network-lab"
+version = "0.2.0"
+description = "Graph-temporal traffic forecasting for Indian road networks"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "torch>=2.2"]
+
+[project.scripts]
+rasta-train = "rasta_dl.train:main"
+rasta-evaluate = "rasta_dl.evaluate:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
